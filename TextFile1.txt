@@ -1,0 +1,12 @@
+print() -kuvame ekranile tekst
+input() - sisestame info ja edastame tekstina
+float()
+  int()
+upper()
+lower()
+capitalize()
+type()
+funktsioonid
+pi
+round()
+randint()
