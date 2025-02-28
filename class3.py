@@ -38,5 +38,15 @@ try:
     vanus_aastades=tana.year-sp.year
     vanus_kuudes=vanus_aastades*12 
     print("vastus: Vanus {vanus_aastades} aastad")
-    except:
+except:
         print("Sa pead YYYY-MM-DD foramt kasutada sisestamisel")
+
+
+  #ulesanne 2
+  #sulgude kasutamine
+  print("a=3 + 8/ (4-2) * 4")
+  a=3 + 8 / (4 - 2) *4
+  print(a)
+  print("a=(3+8)/ (4-2) *4")
+  a=(3 + 8) / (4 - 2) *4
+  print(a)
