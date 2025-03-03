@@ -6,5 +6,5 @@ upper() - "SÕNE"
 lower() -"sõne"
 capitalize() - "Sõne"
 type() - määrab muutuja tüübi
-math moodulide funktsioonid: pi, round()
+math moodulide funktsioonid: pi, round(arv, kohtude arv)
 random moodulide funktsioonid: randit()
