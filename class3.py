@@ -50,3 +50,19 @@ except:
   print("a=(3+8)/ (4-2) *4")
   a=(3 + 8) / (4 - 2) *4
   print(a)
+
+
+  #ulesanne 3
+try:
+    R=float(input("Sisesta R, kus R on ringi raadius:"))
+    # ==, !=, <, >, <=, >=
+   if R<=0:
+       print("Nulliga ja neg. arvudega ei ole mõtte töötada!")
+   else:
+       Ringi_S=round(pi*R**2,2)
+       Ringi_P=round(2*pi*R,2)
+       Ruudsu_S=2*R*2*R
+       Ruudu_P=4*2*R
+       print(f"Ringi_S= {Ringi_S}\nRingi_P= {Ringi_P}\nRuudu_S {Ruudsu_S}\nRuudu_P= {Ruudu_P}")
+except:
+    print("Sisesta ainult arvud!!!")
