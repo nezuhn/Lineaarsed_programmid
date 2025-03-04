@@ -115,6 +115,9 @@ try:
         kesk_tarbimine=l/k*100
 
 #ulesanne 9
+kiirus_kmh=29.9
+minutid=float(input("Sisesta aeg rulluisutamisel:"))
+vahemaa_km=round({kiirus_kmh}/60)
 
 #ulesanne 10 
 minutid_kasutajalt=int(input("Aeg minutides:"))
