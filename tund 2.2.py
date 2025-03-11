@@ -1,7 +1,46 @@
-﻿#5
+﻿#6
+try:
+    küsimus = input("Kas sa tahad lahendada ruutvõrrandi? ")
+    if küsimus.lower()=="jah":
+        print("Võrrand: a*x**2+b*x+c=0")
+        a=int(input("Sisesta arv a: "))
+        b=int(input("Sisesta arv b: "))
+        c=int(input("Sisesta arv c: "))
+        D=b^2-4*a*c
+        print(f"D={D}")
+        if D>0:
+            x1=(-b+sqrt(D))/2*a
+            x2=(-b-sqrt(D)/2*a)
+            print(f"Võrrand on lahendatud, x1={round(x1, 2)} ja x2={round(x2, 2)}")
+        elif D==0:
+            x=-b/(2*a)
+            print(f"Võrrand on lahendatud,x={round(x, 2)}")
+        elif D<0:
+            print("Lahendusi pole")
+    else:
+        print("ok")
+except:
+    print("Viga")
 
 
 
+#5
+user_input = input("Sisesta väärtus: ")
+if user_input.isdigit():  
+    num = int(user_input) 
+    print(f"Sisesta number: {num}")
+    print(f"Type: täisarv")
+    print(f"50% from {num} = {num * 0.5}")
+elif user_input.replace('.', '', 1).isdigit() and user_input.count('.') == 1:  
+    num = float(user_input)  
+    print(f"Sisestatud number: {num}")
+    print(f"Type: murdarv")
+    print(f"70% from {num} = {num * 0.7}")
+elif user_input.isalpha(): 
+    print(f"Sisestatud väärtus {user_input}")
+    print(f"type: tekst")
+else:
+    print("Sisestatud vale väärtus.")
 
 
 #4
