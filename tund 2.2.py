@@ -44,6 +44,7 @@ else:
 
 
 #4
+try:
 päev=int(input("Sünnipäev"))
 kuu=int(input("Sünnipäev"))
 if (kuu==3 and päev>=21) or (kuu==4 and päev<=19):
@@ -80,7 +81,7 @@ try:
     if soov=="jah"
         try:
             nr=int(input("Päeva number: "))
-            if nr in range(1,8):
+            if nr in range(1,7):
                 if nr==1:
                     print("Esmaspäev")
                 elif nr==2:
