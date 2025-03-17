@@ -26,6 +26,7 @@
     <Compile Include="class3.py" />
     <Compile Include="Lineaarsed_programmid.py" />
     <Compile Include="module1.py" />
+    <Compile Include="tund 17.03.py" />
     <Compile Include="tund 2.3.py" />
     <Compile Include="tund 2.2.py" />
     <Compile Include="vigade otsing.py" />
