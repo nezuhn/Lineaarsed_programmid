@@ -1,3 +1,35 @@
+#töö 4.4
+#1
+from re import T
+from string import *
+vokaali=["a","e","u","o","i","ü","ö","õ","ä"]
+konsonanti="qwrtpsdfghklzxcvbnmj"
+numbrid=digits
+märkid=punctuation
+tekst=input=input("Sisend (sõna või lause): ").lower()
+tekst_list=list(tekst)
+if tekst_list.index(" ")>0:
+    print("See on lause")
+    for s in tekst_list:
+        if s in vokaali:
+            v+=1
+        elif s in konsonanti:
+            k+=1
+        elif s in numbrid:
+            n+=1
+        elif s in märkid:
+            m+=1
+        elif s==" ":
+            t+=1
+    print(f"V: {v}\nK: {k}\nN: {n}\nM: {m}\nT: {t}")
+else:
+    print(f"Kokku on {len(tekst_list)}")
+
+
+
+
+
+
 sõne="Programmeerimine"
 print(sõne)
 list_sõne=list(sõne)
