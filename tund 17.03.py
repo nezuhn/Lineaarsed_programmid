@@ -74,3 +74,45 @@ list_sõne2=list_sõne.copy()
 #clear
 list_sõne2.clear()
 print(list_sõne2)
+
+#2
+names = []
+for _ in range(5):
+    name = input("Sisesta nimi: ")
+    names.append(name)
+names.sort()
+print("Tähestikulises järjekorras nimed:", names)
+print("Viimati lisatud nimi:", names[-1])
+
+change_name = input("Kas soovid mõnda nime muuta? (jah/ei): ").strip().lower()
+if change_name == 'jah':
+    old_name = input("Sisesta nimi, mida soovid muuta: ")
+    if old_name in names:
+        new_name = input("Sisesta uus nimi: ")
+        names[names.index(old_name)] = new_name
+        names.sort()  
+        print("Uus nimekiri:", names)
+    else:
+        print("Seda nime ei leitud loendist.")
+opilased = ['Juhan', 'Kati', 'Mario', 'Mario', 'Mati', 'Mati']
+
+unique_opilased = list(set(opilased))
+
+print("Kordumatud nimed:", unique_opilased)
+
+vanused = [25, 18, 22, 20, 30, 21, 19]
+
+kogus = len(vanused)
+suurim = max(vanused)
+vikesim = min(vanused)
+summa = sum(vanused)
+keskmine = summa / kogus
+
+print(f"Vanuste kogus: {kogus}")
+print(f"Suurim vanus: {suurim}")
+print(f"Väikseim vanus: {vikesim}")
+print(f"Vanuste summa: {summa}")
+print(f"Keskmine vanus: {keskmine:.2f}")
+
+
+#3
