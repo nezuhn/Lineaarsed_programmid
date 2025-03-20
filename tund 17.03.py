@@ -126,27 +126,27 @@ def kontrolli_postiindeks(postiindeks):
         return "Postiindeks peab olema 5 numbrit pikk."
     maakond = postiindeks[0]
 
-    if maakond == '1':
+    if maakond == "1":
         maakond_nimi = "Tallinn"
-    elif maakond == '2':
+    elif maakond == "2":
         maakond_nimi = "Narva, Narva-Jıesuu"
-    elif maakond == '3':
+    elif maakond == "3":
         maakond_nimi = "Kohtla-J‰rve"
-    elif maakond == '4':
+    elif maakond == "4":
         maakond_nimi = "Ida-Virumaa, L‰‰ne-Virumaa, Jıgevamaa"
-    elif maakond == '5':
+    elif maakond == "5":
         maakond_nimi = "Tartu linn"
-    elif maakond == '6':
+    elif maakond == "6":
         maakond_nimi = "Tartumaa, Pılvamaa, Vırumaa, Valgamaa"
-    elif maakond == '7':
+    elif maakond == "7":
         maakond_nimi = "Viljandimaa, J‰rvamaa, Harjumaa, Raplamaa"
-    elif maakond == '8':
+    elif maakond == "8":
         maakond_nimi = "P‰rnumaa"
-    elif maakond == '9':
+    elif maakond == "9":
         maakond_nimi = "L‰‰nemaa, Hiiumaa, Saaremaa"
     else:
         return "Tundmatu maakond."
-    if maakond in ['1', '2', '3']:
+    if maakond in ["1", "2", "3"]:
         teade = "Osta j‰‰ge kodus!"
     else:
         teade = "Kandke maske!"
