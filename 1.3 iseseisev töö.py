@@ -1,6 +1,5 @@
-﻿import math  # импортируем math для использования математических функций
+﻿import math  
 
-# ------------------
 print("Ruudu karakteristikud")
 try:
     a = int(input('Sisesta ruudu külje pikkus => '))
@@ -15,7 +14,7 @@ try:
         print("Külg ei saa olla <=0-ga")
 except:
     print("Külje suurus on vaja int formaadis sisestada!")
-# ----------------------
+
 print("Ristküliku karakteristikud")
 try:
     b = int(input("Sisesta ristküliku 1. külje pikkus => "))
@@ -34,7 +33,7 @@ try:
         print(f"Ristküliku diagonaal, {round(di)}")
 except:
     print("Viga: Palun sisestage numbrilised väärtused!")
-# ----------------------
+
 print("Ringi karakteristikud")
 try:
     r = int(input("Sisesta ringi raadiusi pikkus => "))
