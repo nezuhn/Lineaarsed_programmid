@@ -1,4 +1,4 @@
-﻿#6
+#6
 try:
     küsimus = input("Kas sa tahad lahendada ruutvõrrandi? ")
     if küsimus.lower()=="jah":
