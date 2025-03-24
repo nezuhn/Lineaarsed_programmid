@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tund 3 if else.py</StartupFile>
+    <StartupFile>24.03.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,6 +30,7 @@
     <Compile Include="20.03.py" />
     <Compile Include="module3.py" />
     <Compile Include="module4.py" />
+    <Compile Include="24.03.py" />
     <Compile Include="tund 17.03.py" />
     <Compile Include="tund 2.3.py" />
     <Compile Include="tund 2.2.py" />
