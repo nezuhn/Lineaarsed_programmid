@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>24.03.py</StartupFile>
+    <StartupFile>funktsionide_kasutamine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
     <Compile Include="class1.py" />
     <Compile Include="class2.py" />
     <Compile Include="class3.py" />
+    <Compile Include="funktsionide_kasutamine.py" />
     <Compile Include="Lineaarsed_programmid.py" />
     <Compile Include="module1.py" />
     <Compile Include="1.3 iseseisev töö.py" />
@@ -31,6 +32,7 @@
     <Compile Include="module3.py" />
     <Compile Include="module4.py" />
     <Compile Include="24.03.py" />
+    <Compile Include="Teema5_kasutajate_fun.py" />
     <Compile Include="tund 17.03.py" />
     <Compile Include="tund 2.3.py" />
     <Compile Include="tund 2.2.py" />
