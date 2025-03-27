@@ -43,10 +43,16 @@ a=float(input("Ruudu külg= "))
 S,P,d=square(a)
 
 
+#6
+
+
+
 #7
-while True:
-päev=int(input("Sisesta päev: "))
-kuu=int(input("Sisesta kuu: "))
-aasta=int(input("Sisesta aasta: "))
-v=date(päev,kuu,aasta)
-print(v)
+try:
+    päev=int(input("Sisesta päev: "))
+    kuu=int(input("Sisesta kuu: "))
+    aasta=int(input("Sisesta aasta: "))
+    v=date(päev,kuu,aasta)
+    print(v)
+except:
+    print("Viga!")
