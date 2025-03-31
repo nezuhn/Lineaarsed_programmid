@@ -1,55 +1,55 @@
-import math  # Импортируем модуль math для математических операций
+import math  # Impordime math mooduli
 
-print("Характеристики квадрата")  # Сообщение для квадрата
+print("Ruudu omadused")  # Teade ruudu kohta
 try:
-    a = int(input('Введите длину стороны квадрата => '))  # Вводим длину стороны квадрата
-    if a > 0:  # Проверяем, что длина стороны больше 0
-        S = a**2  # Площадь квадрата (сторона^2)
-        print(f"Площадь квадрата: {S}")
+    a = int(input('Sisestage ruudu külje pikkus => '))  # Sisestame ruudu külje pikkuse
+    if a > 0:  # Kontrollime, et külje pikkus on suurem kui 0
+        S = a**2  # Ruudu pindala (külg^2)
+        print(f"Ruudu pindala: {S}")
         
-        P = 4 * a  # Периметр квадрата (4 * сторона)
-        print(f"Периметр квадрата: {P}")
+        P = 4 * a  # Ruudu perimeeter (4 * külg)
+        print(f"Ruudu perimeeter: {P}")
         
-        di = a * math.sqrt(2)  # Диагональ квадрата (сторона * √2)
-        print(f"Диагональ квадрата: {round(di, 2)}")  # Округляем до 2 знаков после запятой
+        di = a * math.sqrt(2)  # Ruudu diagonaal (külg * √2)
+        print(f"Ruudu diagonaal: {round(di, 2)}")  # Ümarame kahe komakoha täpsusega
     else:
-        print("Сторона не может быть <= 0")  # Если сторона <= 0, выводим ошибку
+        print("Külg ei saa olla <= 0")  # Kui külg <= 0, kuvame vea
 except:
-    print("Ошибка: введите целое число!")  # Если введено не число
+    print("Viga: sisestage täisarv!")  # Kui sisestatakse mitte-arv
 
-print("Характеристики прямоугольника")  # Сообщение для прямоугольника
+print("Õigekumeriku omadused")  # Teade ristküliku kohta
 try:
-    b = int(input("Введите длину 1-й стороны прямоугольника => "))  # Вводим первую сторону
-    c = int(input("Введите длину 2-й стороны прямоугольника => "))  # Вводим вторую сторону
+    b = int(input("Sisestage 1. külje pikkus ristkülikule => "))  # Sisestame esimese külje pikkuse
+    c = int(input("Sisestage 2. külje pikkus ristkülikule => "))  # Sisestame teise külje pikkuse
     
-    if b <= 0 or c <= 0:  # Проверяем, что стороны положительные
-        print("Стороны должны быть положительными числами.")
+    if b <= 0 or c <= 0:  # Kontrollime, et küljed on positiivsed
+        print("Küljed peavad olema positiivsed numbrid.")
     else:
-        S = b * c  # Площадь прямоугольника (сторона1 * сторона2)
-        print(f"Площадь прямоугольника: {S}")
+        S = b * c  # Ristküliku pindala (külg1 * külg2)
+        print(f"Ristküliku pindala: {S}")
         
-        P = 2 * (b + c)  # Периметр прямоугольника (2 * (сторона1 + сторона2))
-        print(f"Периметр прямоугольника: {P}")
+        P = 2 * (b + c)  # Ristküliku perimeeter (2 * (külg1 + külg2))
+        print(f"Ristküliku perimeeter: {P}")
         
-        di = math.sqrt(b**2 + c**2)  # Диагональ прямоугольника по теореме Пифагора
-        print(f"Диагональ прямоугольника: {round(di)}")  # Округляем до целого числа
+        di =  (b**2 + c**2)  # Ristküliku diagonaal Pythagorase teoreemi järgi
+        print(f"Ristküliku diagonaal: {round(di)}")  # Ümarame täisarvuni
 except:
-    print("Ошибка: введите числовые значения!")  # Если введены не числа
+    print("Viga: sisestage arvväärtused!")  # Kui sisestatakse mitte-arv
 
-print("Характеристики окружности")  # Сообщение для окружности
+print("Ringjoone omadused")  # Teade ringjoone kohta
 try:
-    r = int(input("Введите радиус окружности => "))  # Вводим радиус окружности
+    r = int(input("Sisestage ringjoone raadius => "))  # Sisestame ringjoone raadiuse
     
-    if r <= 0:  # Проверяем, что радиус больше 0
-        print("Радиус должен быть положительным числом.")
+    if r <= 0:  # Kontrollime, et raadius on positiivne
+        print("Raadius peab olema positiivne number.")
     else:
-        d = 2 * r  # Диаметр окружности (2 * радиус)
-        print(f"Диаметр окружности: {d}")
+        d = 2 * r  # Ringjoone diameeter (2 * raadius)
+        print(f"Ringjoone diameeter: {d}")
         
-        S = math.pi * r**2  # Площадь окружности (π * радиус^2)
-        print(f"Площадь окружности: {round(S)}")  # Округляем до целого числа
+        S = math.pi * r**2  # Ringjoone pindala (π * raadius^2)
+        print(f"Ringjoone pindala: {round(S)}")  # Ümarame täisarvuni
         
-        C = 2 * math.pi * r  # Длина окружности (2 * π * радиус)
-        print(f"Длина окружности: {round(C)}")  # Округляем до целого числа
+        C = 2 * math.pi * r  # Ringjoone ümbermõõt (2 * π * raadius)
+        print(f"Ringjoone ümbermõõt: {round(C)}")  # Ümarame täisarvuni
 except:
-    print("Ошибка: введите числовые значения!")  # Если введены не числа
+    print("Viga: sisestage arvväärtused!")  # Kui sisestatakse mitte-arv
