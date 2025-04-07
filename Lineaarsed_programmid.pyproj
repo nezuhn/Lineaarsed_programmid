@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>funktsionide_kasutamine.py</StartupFile>
+    <StartupFile>palgad.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +32,8 @@
     <Compile Include="module3.py" />
     <Compile Include="module4.py" />
     <Compile Include="24.03.py" />
+    <Compile Include="palgad.py" />
+    <Compile Include="Module_Palgad.py" />
     <Compile Include="Teema5_kasutajate_fun.py" />
     <Compile Include="tund 17.03.py" />
     <Compile Include="tund 2.3.py" />
