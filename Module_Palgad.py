@@ -20,7 +20,7 @@ def Lisa_andmed(p:list,i:list):
     i.append(nimi)
 
 def Kustuta_andmed(p:list,i:list):
-    """ Самая высокая зарплата и кто её получает
+    """ Удалить человека и его зарплату
     """
     try:
          nimi=input("Nimi: ")
@@ -37,7 +37,7 @@ def Kustuta_andmed(p:list,i:list):
     except:
         print("Kirjuta ainult tähtede kasutades")
 def Suurim_palk(p:list,i:list):
-    """Самая большая зарплата и кто её получает
+    """Самую большую зарплату и кто ее получает 
     """
     suurim=max(p)
     k=i.count(suurim)
@@ -48,12 +48,26 @@ def Suurim_palk(p:list,i:list):
         ind=ind+1
 
 def Sorteerimine_kasvav(p:list,i:list)-> any:
+    """Упорядочить зарплаты в порядке возрастания и убывания вместе с именами
     """
-    """
-    v=input("Vali märk: > (kasvav) või < (kahanev)")
+    v=input("Vali märk: > (kasvav) või < (kahanev)")#Try except koos while true'ga
     for n in range(0,len(i)):
         for m in range(n,len(i)):
             if eval(str(p[n])+v+str(p[m])):
                 p[n],p[m]=p[m],p[n]
                 i[n],i[m]=i[m],i[n]
     return p,i
+def Võrdsed_palgad(p:list,i:list):
+    """Узнать, кто получает одинаковую зарплату, найти сколько таких людей вывести их данные на экран.
+    """
+    hulk=set(p)
+    print(hulk)
+    for palk in hulk:
+        k=p.count(palk)
+        if k>1:
+            print(f"Palk {palk}")
+            ind=p.index(palk)
+            for j in range(k):
+                ind=p.index(palk,ind)
+                print(f"Saab kätte {i[ind]}")
+                ind+=1

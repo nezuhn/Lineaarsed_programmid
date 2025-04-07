@@ -8,7 +8,7 @@ while True:
     print("Andmed:")
     print(inimesed)
     print(palgad)
-    print("Vajuta:\n1-Andmete lisamiseks\n2-Andmete kustutamiseks nime järgi")
+    print("Vajuta:\n1-Andmete lisamiseks\n2-Andmete kustutamiseks nime järgi\n3-Suurima palga leidmiseks\n4-Andmete sortimiseks\n5-Võrdused palgad")
     v=int(input())
     if v==1:
         k=int(input("Mitu inimest?"))
@@ -19,3 +19,5 @@ while True:
         Suurim_palk(palgad,inimesed)
     elif v==4:
         palgad,inimesed=Sorteerimine_kasvav(palgad,inimesed)
+    elif v==5:
+        Võrdsed_palgad(palgad,inimesed)
