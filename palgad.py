@@ -21,3 +21,13 @@ while True:
         palgad,inimesed=Sorteerimine_kasvav(palgad,inimesed)
     elif v==5:
         Võrdsed_palgad(palgad,inimesed)
+    elif v==6
+        palk_nime_jargi(palgad,inimesed)
+    elif v==7
+        inimesed_üle_alla_summa(palgad,inimesed)
+    elif v==8
+        top_t_inimesed(palgad,inimesed)
+    elif v==9
+        keskmine_palk(palgad,inimesed)
+    elif v==10
+        tulumaks(palgad,inimesed)

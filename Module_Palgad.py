@@ -57,6 +57,7 @@ def Sorteerimine_kasvav(p:list,i:list)-> any:
                 p[n],p[m]=p[m],p[n]
                 i[n],i[m]=i[m],i[n]
     return p,i
+
 def Võrdsed_palgad(p:list,i:list):
     """Узнать, кто получает одинаковую зарплату, найти сколько таких людей вывести их данные на экран.
     """
@@ -71,3 +72,50 @@ def Võrdsed_palgad(p:list,i:list):
                 ind=p.index(palk,ind)
                 print(f"Saab kätte {i[ind]}")
                 ind+=1
+
+def palk_nime_jargi(inimesed, palgad, nimi):
+    """Сделать поиск зарплаты по имени человека. Учесть, что имена могут повторяться
+    """
+
+    # Ищет зарплату по имени человека
+    nimi = nimi.capitalize()  # Учитываем регистр имени
+    if nimi in inimesed:
+        indeks = inimesed.index(nimi)  # Находим индекс имени
+        return palgad[indeks]  # Возвращаем зарплату
+    else:
+        print(f"{nimi} не найден в списке.")  # Если имя не найдено
+        return None
+
+def inimesed_üle_alla_summa(inimesed, palgad, summa, suurem=True):
+    """ Вывести список людей(с зарплатами), кто получает больше/меньше чем указанная сумма.
+    """
+tulemus = []
+for i, palk in enumerate(palgad):
+        if suurem and palk > summa:  # Если зарплата больше заданной суммы
+            tulemus.append((inimesed[i], palk))
+        elif not suurem and palk < summa:  # Если зарплата меньше заданной суммы
+            tulemus.append((inimesed[i], palk))
+return tulemus
+
+def top_t_inimesed(inimesed, palgad, t=3):
+    """ Т самых бедных и самых богатых человека
+    """
+    inimesed_sorted, palgad_sorted = jargesta_palgad(inimesed, palgad, kasvasv=False)  # Сортируем по убыванию
+    top_rikkad = list(zip(inimesed_sorted[:t], palgad_sorted[:t]))  # Самые богатые
+    top_vaesed = list(zip(inimesed_sorted[-t:], palgad_sorted[-t:]))  # Самые бедные
+    return top_rikkad, top_vaesed
+
+def keskmine_palk(inimesed, palgad):
+    """ Среднюю зарплату и имя человека ее получающего
+    """
+    keskmine = sum(palgad) / len(palgad)  # Средняя зарплата
+    saajad = [inimesed[i] for i, palk in enumerate(palgad) if palk == keskmine]  # Люди с этой зарплатой
+    return keskmine, saajad
+
+def tulumaks(palk):
+    """Вычислить зарплату, которую человек получит на руки после вычисления подоходного налога.
+    """
+    maks = palk * 0.2  # Налог
+    netopalk = palk - maks  # Чистая зарплата
+    return netopalk
+
