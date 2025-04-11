@@ -95,7 +95,7 @@ for i, palk in enumerate(palgad):
             tulemus.append((inimesed[i], palk))
         elif not suurem and palk < summa:  # Если зарплата меньше заданной суммы
             tulemus.append((inimesed[i], palk))
-return tulemus
+            
 
 def top_t_inimesed(inimesed, palgad, t=3):
     """ Т самых бедных и самых богатых человека
@@ -119,3 +119,39 @@ def tulumaks(palk):
     netopalk = palk - maks  # Чистая зарплата
     return netopalk
 
+def Bonus_Salary(p:list, i:list):
+    """Cвоя функция по выбору. Добавляет прибавку к зарплате выбранному работнику, позваляя выбрать процент на какой зарплата увеличивается
+    """
+    for idx,(name,salary) in enumerate(zip(i,p),l):
+        print("\nCurrent employees and their salaries:")
+        print(f"{idx+1}. {name}: {salary}")
+    try:
+        choice=int(input("Valige töötaja:")) -1
+        bonus = float(input("Kirjutage mittu protsentis palk tõuseb"))
+        if 0 <=choice < len (i) and bonus > 0:
+            original_salary = p[choice]
+            bonus_to = bonus / 100
+            bonus_salary = original_salary * bonus_to + original_salary
+            print(f"New salary is: {bonus_salary}$")
+        else:
+            print("Valige eksisteeriv töötaja valige bonus rohkem kui 0")
+
+
+    except:
+        print("Error!")
+
+def palgaotsing(p:list, i:list):
+    """Funktsioon teha palgaotsing isiku nimi järgi.
+    :param i:Inimeste nimekiri
+    :param p: Palkade nimekiri
+    :rtype:none
+    """
+    nimi=input("Sisesta nimi mida sa sooviks: ")
+    leitud = False
+    for j in range(len(i)):
+        for j in range(len(i)):
+            if nimi == i[j]:
+                print(f"{nimi} palk on {p[j]}")
+                leitud = True
+    if leitud==False:
+        print(f"{nimi} kohta andmeid ei leitud. ") 
