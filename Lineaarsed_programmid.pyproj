@@ -33,6 +33,7 @@
     <Compile Include="module4.py" />
     <Compile Include="24.03.py" />
     <Compile Include="5.5 iseseisev töö.py" />
+    <Compile Include="tund 14.04.py" />
     <Compile Include="palgad.py" />
     <Compile Include="Module_Palgad.py" />
     <Compile Include="Teema5_kasutajate_fun.py" />
