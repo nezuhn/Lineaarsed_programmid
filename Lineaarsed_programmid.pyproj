@@ -27,7 +27,9 @@
     <Compile Include="class2.py" />
     <Compile Include="class3.py" />
     <Compile Include="funktsionide_kasutamine.py" />
+    <Compile Include="funktsioonid.py" />
     <Compile Include="Lineaarsed_programmid.py" />
+    <Compile Include="main.py" />
     <Compile Include="module1.py" />
     <Compile Include="1.3 iseseisev töö.py" />
     <Compile Include="20.03.py" />
@@ -51,6 +53,7 @@
     <Compile Include="tund 3 if else.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="kontaktid.txt" />
     <Content Include="loetelu.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
