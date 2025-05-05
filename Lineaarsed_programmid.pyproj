@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tund 28.04.py</StartupFile>
+    <StartupFile>teema8.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -37,6 +37,7 @@
     <Compile Include="module4.py" />
     <Compile Include="24.03.py" />
     <Compile Include="5.5 iseseisev töö.py" />
+    <Compile Include="teema8.py" />
     <Compile Include="tund 28.04.py" />
     <Compile Include="sõnad.py" />
     <Compile Include="sõnastik.py" />
