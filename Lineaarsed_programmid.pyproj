@@ -29,6 +29,7 @@
     <Compile Include="class3.py" />
     <Compile Include="funktsionide_kasutamine.py" />
     <Compile Include="funktsioonid.py" />
+    <Compile Include="funktsioonid1.py" />
     <Compile Include="Lineaarsed_programmid.py" />
     <Compile Include="main.py" />
     <Compile Include="module1.py" />
@@ -56,6 +57,7 @@
     <Compile Include="tund 3 if else.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="kontaktid.json" />
     <Content Include="kontaktid.txt" />
     <Content Include="loetelu.txt" />
     <Content Include="maed.txt" />

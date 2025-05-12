@@ -1,6 +1,23 @@
 import json
 import smtplib
 from email.mime.text import MIMEText
+import os
+import json 
+
+fili_nimi = "kontaktid.json"
+
+def loe_kontaktid_failist():
+    if not os.path.exists(faili_nimi):
+        return []
+    with open(faili_nimi, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def salvesta_kontaktid_faili(kontaktid):
+    with open(faili_nimi, "w", encoding="utf-8") as f:
+        json.dump(kontaktid, f, ensure_ascii=False, indent=4)
+
+def lisa_kontakt(kontaktid, nimi, telefon, email):
+    kontaktid.append({"nimi": nimi, "telefon": telefon, "email": email})
 
 # Kontaktide lugemine failist
 def loe_kontaktid(fail):
@@ -39,16 +56,9 @@ def kuva_kontaktid(fail):
         print("Kontaktide nimekiri on tühi.")
 
 # Kontakti otsimine nime järgi
-def otsi_kontakt(fail):
-    nimi = input("Sisesta otsitava kontakti nimi: ")
-    kontaktid = loe_kontaktid(fail)
-    leitud = [k for k in kontaktid if nimi.lower() in k['nimi'].lower()]
-    
-    if leitud:
-        for kontakt in leitud:
-            print(f"{kontakt['nimi']} | {kontakt['telefon']} | {kontakt['email']}")
-    else:
-        print("Kontakti ei leitud.")
+def otsi_kontakt(fail): 
+    return [k for k in kontaktid if nimi.lower() in k['nimi'].lower()]
+   
 
 # Kontakti kustutamine
 def kustuta_kontakt(fail):

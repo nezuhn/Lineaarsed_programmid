@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 with open('maed.txt', 'r') as file:
     lines = file.readlines()
 
-# Andmete tˆˆtlemine
+# Andmete t√∂√∂tlemine
 nimed = []
 korgused = []
 
 for rida in lines:
     osad = rida.strip().split()
-    nimi = osad[0].replace('_', ' ')  # Muudame _ t¸hikuks tagasi
+    nimi = osad[0].replace('_', ' ')  # Muudame _ t√ºhikuks tagasi
     korgus = int(osad[1])
     nimed.append(nimi)
     korgused.append(korgus)
@@ -24,24 +24,24 @@ minimaalne = np.min(korgused_np)
 summa = np.sum(korgused_np)
 
 # Tekstina terminalis
-print("Statistika maailma kırgeimate m‰gede kohta:")
-print(f"Keskmine kırgus: {keskmine:.2f} m")
-print(f"Kırgeim m‰gi: {nimed[np.argmax(korgused_np)]} ({maksimum} m)")
-print(f"Madalamaim m‰gi: {nimed[np.argmin(korgused_np)]} ({minimaalne} m)")
-print(f"Kogukırgus: {summa} m")
+print("Statistika maailma k√µrgeimate m√§gede kohta:")
+print(f"Keskmine k√µrgus: {keskmine:.2f} m")
+print(f"K√µrgeim m√§gi: {nimed[np.argmax(korgused_np)]} ({maksimum} m)")
+print(f"Madalamaim m√§gi: {nimed[np.argmin(korgused_np)]} ({minimaalne} m)")
+print(f"Koguk√µrgus: {summa} m")
 
 # Graafik (esialgne, sorteerimata)
 plt.figure(figsize=(10, 6))
 plt.bar(nimed, korgused, color='skyblue')
 plt.xticks(rotation=45, ha='right')
-plt.ylabel('Kırgus (m)')
-plt.title('Maailma kırgeimad m‰ed')
+plt.ylabel('K√µrgus (m)')
+plt.title('Maailma k√µrgeimad m√§ed')
 plt.tight_layout()
 plt.savefig('maed_graafik.png')
 plt.show()
 
-# Lisa¸lesanne: sorteerimine ja uus graafik
-# Sorteerime andmed kırguse j‰rgi kahanevalt
+# Lisa√ºlesanne: sorteerimine ja uus graafik
+# Sorteerime andmed k√µrguse j√§rgi kahanevalt
 nimed_np = np.array(nimed)
 sorteeritud_indeksid = np.argsort(korgused_np)[::-1]
 nimed_sorted = nimed_np[sorteeritud_indeksid]
@@ -51,8 +51,8 @@ korgused_sorted = korgused_np[sorteeritud_indeksid]
 plt.figure(figsize=(10, 6))
 plt.bar(nimed_sorted, korgused_sorted, color='orange')
 plt.xticks(rotation=45, ha='right')
-plt.ylabel('Kırgus (m)')
-plt.title('Maailma kırgeimad m‰ed (sorteeritud)')
+plt.ylabel('K√µrgus (m)')
+plt.title('Maailma k√µrgeimad m√§ed (sorteeritud)')
 plt.tight_layout()
 plt.savefig('maed_graafik_sorted.png')
 plt.show()

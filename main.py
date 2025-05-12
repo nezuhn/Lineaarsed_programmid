@@ -1,48 +1,60 @@
-import os
-import json
-from funktsioonid import *
+import tkinter as tk
+from tkinter import messagebox
+import funktsioonid as f
+kontaktid=f.loe_kontaktid_failist()
+def kuva_kontaktid():
+    tekstikast.delete("1.0", "end")
+    for kontakt in kontaktid:
+        tekstikast.insert("end", f"{kontakt['nimi']} | {kontakt['telefon']} | {kontakt['email']}\n")
 
-# Faili nimi, kus kontaktid salvestatakse
-fail = "kontaktid.json"
-
-# Kui fail ei eksisteeri, siis loome selle
-if not os.path.exists(fail):
-    with open(fail, 'w') as f:
-        json.dump([], f)
-
-# Loeme kontaktid failist
-kontaktid = loe_kontaktid(fail)
-
-while True:
-    print("\nTelefoniraamat:")
-    print("1. Lisa kontakt")
-    print("2. Kuvage kõik kontaktid")
-    print("3. Otsi kontakt nime järgi")
-    print("4. Kustuta kontakt")
-    print("5. Muuda kontakt")
-    print("6. Sorteeri kontaktid")
-    print("7. Saada e-kiri")
-    print("8. Välju")
-
-    valik = input("Valige tegevus: ")
-
-    if valik == '1':
-        lisa_kontakt(fail)
-    elif valik == '2':
-        kuva_kontaktid(fail)
-    elif valik == '3':
-        otsi_kontakt(fail)
-    elif valik == '4':
-        kustuta_kontakt(fail)
-    elif valik == '5':
-        muuda_kontakt(fail)
-    elif valik == '6':
-        sorteeri_kontaktid(fail)
-    elif valik == '7':
-        saada_email(fail)
-    elif valik == '8':
-        print("Programmi lõpetamine.")
-        break
+def lisa_kontakt():
+    nimi = nimi_entry.get()
+    telefon = telefon_entry.get()
+    email = email_entry.get()
+    if nimi and telefon and email:
+        f.lisa_kontakt(kontaktid, nimi, telefon, email)
+        f.salvesta_kontaktid_faili(kontaktid)
+        messagebox.showinfo("Edu", "Kontakt lisatud.")
+        nimi_entry.delete(0, 'end')
+        telefon_entry.delete(0, 'end')
+        email_entry.delete(0, 'end')
+        kuva_kontaktid()
     else:
-        print("Vale valik, proovige uuesti.")
+        messagebox.showwarning("Tühjad väljad", "Täida kõik väljad.")
+
+def otsi_kontakti_gui():
+    nimi = nimi_entry.get()
+    tulemused = f.otsi_kontakt(kontaktid, nimi)
+
+    if tulemused:
+        kontakt = tulemused[0]
+        otsingu_viide.set(kontakt["nimi"])
+
+        nimi_entry.delete(0, 'end')
+        nimi_entry.insert(0, kontakt["nimi"])
+        telefon_entry.delete(0, 'end')
+        telefon_entry.insert(0, kontakt["telefon"])
+        email_entry.delete(0, 'end')
+        email_entry.insert(0, kontakt["email"])
+        tekstikast.delete("1.0", 'end')
+        tekstikast.insert("end", f"leitud: {kontakt['nimi']} | {kontakt ['telefon']} | {kontakt['email']}\n")
+    else:
+        messagebox.showinfo("Tulemus puudub", "Kontakti ei leitud.")
+
+def kustuta_kontakt_gui():
+    nimi = nimi_entry.get()
+    if f.kustuta_kontakt(kontaktid, nimi):
+        f.salvesta_kontaktid_faili(kontaktid)
+        messagebox.showinfo("Kustutatud", f"'{nimi}' kustutati.")
+        kuva_kontaktid()
+    else:
+        messagebox.showwarning("Ei leitud", "Kontakti ei leitud.")
+
+def muuda_kontakt(kontaktid, vana_nimi, uus_nimi, uus_telefon, ):
+
+
+def sorteeri_kontaktid(kontaktid, vaike):
+
+
+
 
