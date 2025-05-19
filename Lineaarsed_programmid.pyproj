@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>8.2 tund.py</StartupFile>
+    <StartupFile>1.osa_pygame.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="1.1osa_pygame.py" />
+    <Compile Include="1.osa_pygame.py" />
     <Compile Include="25.04.1.py" />
     <Compile Include="25.04.py" />
     <Compile Include="8.2 tund.py" />
@@ -61,6 +63,7 @@
     <Content Include="kontaktid.txt" />
     <Content Include="loetelu.txt" />
     <Content Include="maed.txt" />
+    <Content Include="bee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
