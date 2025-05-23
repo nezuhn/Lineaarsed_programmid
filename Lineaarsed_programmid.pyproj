@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>2. osa Pygame -Tsüklid ja funktsioonid.py</StartupFile>
+    <StartupFile>Ülesanne 2. Ruudude joonistamine. Tsüklide ja funktsioonide kasutamine (Maja ja tahvel).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -59,6 +59,7 @@
     <Compile Include="vigade otsing.py" />
     <Compile Include="module2.py" />
     <Compile Include="tund 3 if else.py" />
+    <Compile Include="Ülesanne 2. Ruudude joonistamine. Tsüklide ja funktsioonide kasutamine %28Maja ja tahvel%29.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="kontaktid.json" />
