@@ -5,11 +5,11 @@ import random
 pygame.init()
 
 # Akna suurus
-laius, kırgus = 600, 500
-ekraan = pygame.display.set_mode((laius, kırgus))
+laius, k√µrgus = 600, 500
+ekraan = pygame.display.set_mode((laius, k√µrgus))
 pygame.display.set_caption("Tere tulemast!")
 
-# V‰rvid
+# V√§rvid
 sinine = (135, 206, 250)
 roheline = (34, 139, 34)
 kollane = (255, 255, 0)
@@ -26,8 +26,8 @@ except:
 
 # Funktsioonid
 def joonista_paike(ekraan, x, y):
-    # P‰ike: kollane ketas ja kiired
-    pygame.draw.circle(ekraan, kollane, (x, y), 40)  # P‰ikese ketas
+    # P√§ike: kollane ketas ja kiired
+    pygame.draw.circle(ekraan, kollane, (x, y), 40)  # P√§ikese ketas
     for i in range(12):
         nurk = i * 30
         x1 = x + 60 * pygame.math.cos(pygame.math.radians(nurk))
@@ -35,8 +35,8 @@ def joonista_paike(ekraan, x, y):
         pygame.draw.line(ekraan, kollane, (x, y), (x1, y1), 3)
 
 def joonista_lill(ekraan, x, y):
-    # Lill: ıis ja vars
-    pygame.draw.circle(ekraan, (255, 105, 180), (x, y), 20)  # ’is
+    # Lill: √µis ja vars
+    pygame.draw.circle(ekraan, (255, 105, 180), (x, y), 20)  # √ïis
     pygame.draw.rect(ekraan, (0, 128, 0), (x - 5, y, 10, 60))  # Vars
 
 def joonista_pilv(ekraan, x, y):
@@ -55,15 +55,15 @@ def joonista_mesilane(ekraan, x, y):
         pygame.draw.ellipse(ekraan, (255, 255, 255), (x - 10, y - 10, 40, 20))
         pygame.draw.ellipse(ekraan, (255, 255, 255), (x + 5, y - 10, 40, 20))
 
-# Pıhiprogramm
+# P√µhiprogramm
 def main():
     running = True
     while running:
         ekraan.fill(sinine)  # Taustaks sinine taevas
-        pygame.draw.rect(ekraan, roheline, (0, 400, laius, kırgus))  # Muru
+        pygame.draw.rect(ekraan, roheline, (0, 400, laius, k√µrgus))  # Muru
 
         # Joonista objektid
-        joonista_paike(ekraan, 500, 100)  # P‰ike
+        joonista_paike(ekraan, 500, 100)  # P√§ike
         joonista_lill(ekraan, 100, 450)   # Lill 1
         joonista_lill(ekraan, 200, 450)   # Lill 2
         joonista_pilv(ekraan, 100, 100)   # Pilv 1
@@ -75,7 +75,7 @@ def main():
         tekst = font.render("Tere tulemast!", True, must)
         ekraan.blit(tekst, (200, 20))
 
-        # Eventide k‰sitlemine
+        # Eventide k√§sitlemine
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
@@ -86,4 +86,3 @@ while True:
     event=pygame.event.poll()
     if event.type==pygame.QUIT: break
     pygame.quit()
-

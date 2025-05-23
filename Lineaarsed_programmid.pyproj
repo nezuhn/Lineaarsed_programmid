@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>1.osa_pygame.py</StartupFile>
+    <StartupFile>2. osa Pygame -Tsüklid ja funktsioonid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,8 +23,10 @@
   <ItemGroup>
     <Compile Include="1.1osa_pygame.py" />
     <Compile Include="1.osa_pygame.py" />
+    <Compile Include="2. osa Pygame -Tsüklid ja funktsioonid.py" />
     <Compile Include="25.04.1.py" />
     <Compile Include="25.04.py" />
+    <Compile Include="6.1.py" />
     <Compile Include="8.2 tund.py" />
     <Compile Include="class1.py" />
     <Compile Include="class2.py" />
