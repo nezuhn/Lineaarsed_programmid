@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e7115e23-3abc-4edf-b5fb-f764b9040788</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ülesanne 2. Ruudude joonistamine. Tsüklide ja funktsioonide kasutamine (Maja ja tahvel).py</StartupFile>
+    <StartupFile>ülesanne3.1 Liikuv mesilane.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
     <Compile Include="2. osa Pygame -Tsüklid ja funktsioonid.py" />
     <Compile Include="25.04.1.py" />
     <Compile Include="25.04.py" />
+    <Compile Include="3osa pygame.py" />
     <Compile Include="6.1.py" />
     <Compile Include="8.2 tund.py" />
     <Compile Include="class1.py" />
@@ -60,6 +61,8 @@
     <Compile Include="module2.py" />
     <Compile Include="tund 3 if else.py" />
     <Compile Include="Ülesanne 2. Ruudude joonistamine. Tsüklide ja funktsioonide kasutamine %28Maja ja tahvel%29.py" />
+    <Compile Include="Ülesanne 2.2 – Ruuduvõrgu joonistamine Pygame%27iga.py" />
+    <Compile Include="ülesanne3.1 Liikuv mesilane.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="kontaktid.json" />
