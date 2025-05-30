@@ -5,7 +5,7 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Ping-Pong Pygame")
+pygame.display.set_caption("Ping-Pong на Pygame")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -25,10 +25,12 @@ score1 = 0
 score2 = 0
 font = pygame.font.SysFont(None, 50)
 end_font = pygame.font.SysFont(None, 100)
+winner_font = pygame.font.SysFont(None, 60)
 
 clock = pygame.time.Clock()
 
 game_over = False
+winner_text = ""
 
 def draw():
     screen.fill(BLACK)
@@ -43,7 +45,9 @@ def draw():
 def draw_game_over():
     screen.fill(BLACK)
     end_text = end_font.render("THE END", True, WHITE)
-    screen.blit(end_text, (WIDTH//2 - end_text.get_width()//2, HEIGHT//2 - end_text.get_height()//2))
+    winner_render = winner_font.render(winner_text, True, WHITE)
+    screen.blit(end_text, (WIDTH//2 - end_text.get_width()//2, HEIGHT//2 - end_text.get_height()))
+    screen.blit(winner_render, (WIDTH//2 - winner_render.get_width()//2, HEIGHT//2 + 10))
     pygame.display.flip()
 
 while True:
@@ -93,6 +97,10 @@ while True:
         # Проверка окончания игры
         if score1 >= 20 or score2 >= 20:
             game_over = True
+            if score1 > score2:
+                winner_text = "Player 1 wins!"
+            else:
+                winner_text = "Player 2 wins!"
 
         draw()
         pygame.display.flip()
