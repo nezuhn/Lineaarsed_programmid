@@ -15,7 +15,7 @@ pygame.display.set_caption("Liikuv mesilane")
 
 
 bee = pygame.image.load("bee.png")
-bee_pic = pygame.transform.scale(bee, (30, 30))
+bee_pic = pygame.transform.scale(bee, (80, 90))
 bee_rect = bee_pic.get_rect()
 
 
@@ -28,7 +28,7 @@ lilled = []
 for _ in range(5):
     x = random.randint(50, width - 50)
     y = random.randint(50, height - 50)
-    lilled.append({'pos': (x, y), 'raadius': 30, 'varv': red})
+    lilled.append({'pos': (x, y), 'raadius': 30, 'varv': lBlue})
 
 while True:
     bee_speed_x = random.choice([-3, 3])

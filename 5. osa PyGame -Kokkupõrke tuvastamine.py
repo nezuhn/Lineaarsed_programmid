@@ -1,3 +1,4 @@
+from winsound import PlaySound
 import pygame, random
 pygame.init()
 
@@ -76,6 +77,7 @@ while not gameover:
     print(score)
     if score >= 20:
         gameover = True
+pygame.mixer.music.load("YouWin.wav")
 
 while True:
     event = pygame.event.poll()

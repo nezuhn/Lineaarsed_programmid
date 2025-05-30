@@ -46,6 +46,7 @@
     <Compile Include="24.03.py" />
     <Compile Include="5.5 iseseisev töö.py" />
     <Compile Include="8.1 tund.py" />
+    <Compile Include="pingpong.py" />
     <Compile Include="teema8.py" />
     <Compile Include="tund 28.04.py" />
     <Compile Include="sõnad.py" />
