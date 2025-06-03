@@ -185,7 +185,5 @@ btn_sorteeri_nimi.pack(side=RIGHT, padx=5)
 box = Listbox(aken, height=10, width=115, font=("Times New Roman", 12), fg=varvid["text_color"], bg=varvid["entry_bg"])
 box.pack(padx=20, pady=10)
 
-aken.
-
-configure(bg=varvid["bg"])
+aken.configure(bg=varvid["bg"])
 aken.mainloop()
